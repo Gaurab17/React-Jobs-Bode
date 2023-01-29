@@ -1,18 +1,17 @@
 import React, { createContext } from 'react'
-// import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { BrowserRouter } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import App from './App'
 import './index.css'
+import HomePage from './screens/Home-page'
 
-// export const userContext = createContext<{ username: string | number; address: string }>({
-//   username: '',
-//   address: '',
-// })
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <BrowserRouter>
-      <App />
+      <Routes>
+        <Route path='/' element={<App />} />
+        <Route path='/home' element={<HomePage />} />
+      </Routes>
     </BrowserRouter>
   </React.StrictMode>,
 )
