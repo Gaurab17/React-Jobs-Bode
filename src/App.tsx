@@ -1,6 +1,8 @@
 import { useContext, useState } from 'react'
 import './App.css'
-import Landingpage from './Components/Landingpage'
+import LandingPage from './screens/Logo-preview'
+// import { BrowserRouter as Router } from 'react-router-dom'
+
 // import { userContext } from './main'
 
 function App() {
@@ -9,7 +11,7 @@ function App() {
 
   return (
     <div className=' h-screen bg-gradient-to-r from-[#345267] to-[#3F8F8B]'>
-      <Landingpage />
+      <LandingPage />
     </div>
   )
 }
