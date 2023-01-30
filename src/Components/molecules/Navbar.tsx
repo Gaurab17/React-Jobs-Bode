@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 import MainLogo from '../../assets/svgs/mainlogo.svg'
 import { Button } from '../atoms'
 

@@ -1,15 +1,35 @@
-import React from 'react'
-// import gif1 from '.././assets/svgs/gif1.svg'
+// import React, { useState } from 'react'
+import gif1 from '../../assets/svgs/gif1.svg'
+import { Button } from '../atoms'
+import SearchBtn from '../atoms/Buttons/searchbtn'
+import icon from '../../assets/svgs/icon.svg'
+// import search from '../../assets/svgs/search.svg'
 
+// const [search, newSearch] = useState('')
+
+// const searchFunc = ({ e }: { e: any }) => {
+//   newSearch(e.target.value)
+// }
+
+const clickFunc = () => {
+  console.log('Button CLicked')
+}
 const Container = () => {
   return (
-    <pre className='h-[430px] w-[800px] translate-y-44 mr-20 bg-slate-400 flex flex-col items-center justify-center'>
-      <img src='' alt='' />
-      <h1>Looking for a job change</h1>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque, iste.</p>
-      <input type='text' />
-      <button>Explore More</button>
-    </pre>
+    <div className='h-[430px] w-[500px] bg-[#e6e6e6] flex flex-col items-center justify-center m-12 rounded-[50px]'>
+      <img className='w-[320px] h-[200px] px-8 pb-8 pt-[66px]' src={gif1} alt='' />
+      <h1 className='text-[#4E4E4E] pb-4 text-xl'>Looking For Job Change?</h1>
+      <p className='pb-4 text-center px-8'>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi, consectetur?
+      </p>
+      {/* <SearchBtn type='submit' placeholder='Search Here' onChange={searchFunc} /> <br /> */}
+      <Button
+        text='Explore More'
+        icon={icon}
+        className={'bg-[#6E877A] rounded-2xl h-[40px] w-[150px] flex justify-center items-center'}
+        clickFunction={clickFunc}
+      />
+    </div>
   )
 }
 
