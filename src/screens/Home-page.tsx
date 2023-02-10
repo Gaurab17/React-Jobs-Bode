@@ -3,7 +3,6 @@ import Navbar from '../Components/molecules/Navbar'
 import { Container } from '../Components/atoms'
 import gif1 from '../assets/svgs/gif1.svg'
 import gif2 from '../assets/svgs/gif2.svg'
-import { useContext } from 'react'
 
 const HomePage = () => {
   return (
@@ -14,8 +13,8 @@ const HomePage = () => {
         What Are You Looking For?
       </h1>
       <div className='flex flex-row items-center justify-center'>
-        <Container text='Looking For Job Change?' image={gif1} />
-        <Container text='Looking For Service Solution?' image={gif2} />
+        <Container text='Looking For Job Change?' image={gif1} btnColor='primary' />
+        <Container text='Looking For Service Solution?' image={gif2} btnColor='secondary' />
       </div>
     </div>
   )

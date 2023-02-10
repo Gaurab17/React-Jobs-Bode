@@ -21,13 +21,15 @@ const Navbar = () => {
           clickFunction={buttonClick}
           type='submit'
           text='Login'
-          className='bg-[#345267] text-[#ffffff] text-[22px] h-[48px] w-[111px] mx-[19px] rounded-[10px]'
+          btnType='secondary'
+          className=' text-[#ffffff] text-[22px] h-[48px] w-[111px] mx-[19px] rounded-[10px]'
         />
         <Button
           clickFunction={buttonClick}
           type='submit'
           text='Sign Up'
-          className='bg-[#6E877A] text-[#ffffff] text-[22px] h-[48px] w-[111px] mr-[128px] rounded-[10px]'
+          btnType='primary'
+          className=' text-[#ffffff] text-[22px] h-[48px] w-[111px] mr-[128px] rounded-[10px]'
         />
       </div>
     </div>

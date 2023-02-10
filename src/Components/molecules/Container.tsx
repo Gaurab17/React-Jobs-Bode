@@ -14,7 +14,7 @@ import { ContainerProps } from '../atoms/Buttons/types'
 const clickFunc = () => {
   console.log('Button CLicked')
 }
-const Container = ({ text, image }: ContainerProps) => {
+const Container = ({ text, image, btnColor }: ContainerProps) => {
   return (
     <div className='h-[830px] w-[800px] bg-[#efeded] flex flex-col items-center justify-center m-12 rounded-[50px]'>
       <img className=' h-[200px] w-[429px] mx-[175px] mb-[80px]' src={image} alt='' />
@@ -31,8 +31,9 @@ const Container = ({ text, image }: ContainerProps) => {
 
       <Button
         text='Explore More'
+        btnType={btnColor}
         className={
-          ' bg-[#345267] rounded-[56px] h-[75px] w-[287px] text-[27px] text-[#FFFFFF] flex justify-center items-center'
+          'rounded-[56px] h-[75px] w-[287px] text-[27px] text-[#FFFFFF] flex justify-center items-center'
         }
         clickFunction={clickFunc}
         icon={icon}
