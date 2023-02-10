@@ -1,21 +1,35 @@
 // import React from 'react'
-import MainLogo from '../../assets/svgs/mainlogo.svg'
+import gif1 from '../../assets/svgs/mainlogo.svg'
 import { Button } from '../atoms'
+
+const buttonClick = () => {
+  console.log('Hello World')
+}
 
 const Navbar = () => {
   return (
-    <div className=' mt-4 h-[40px] w-full flex flex-row items-center justify-end'>
-      <img className=' h-5' src={MainLogo} alt='' />
-      <ul className=' flex flex-row text-xl p-16'>
-        <li className='px-4'>About</li>
-        <li className='px-4'>Contact Us</li>
-        <li className='px-4'>Privacy Policy</li>
-      </ul>
+    <div className='pt-[107px] h-[40px] w-full flex flex-row items-center justify-between'>
+      <img className='pl-[156px]' src={gif1} alt='Some Pics' />
+      <div className='flex flex-row items-center justify-center'>
+        <ul className=' flex flex-row text-xl pr-[31px]'>
+          <li className='px-4'>About</li>
+          <li className='px-4'>Contact Us</li>
+          <li className='px-4'>Privacy Policy</li>
+        </ul>
 
-      <button className='text-xl pr-5'>
-        <Button type='submit' text='Login' className='mx-4 bg-white w-[93px] h-full' />
-        <Button type='submit' text='Sign Up' className='mx-2 bg-white w-[93px] h-full' />
-      </button>
+        <Button
+          clickFunction={buttonClick}
+          type='submit'
+          text='Login'
+          className='bg-[#345267] text-[#ffffff] text-[22px] h-[48px] w-[111px] mx-[19px] rounded-[10px]'
+        />
+        <Button
+          clickFunction={buttonClick}
+          type='submit'
+          text='Sign Up'
+          className='bg-[#6E877A] text-[#ffffff] text-[22px] h-[48px] w-[111px] mr-[128px] rounded-[10px]'
+        />
+      </div>
     </div>
   )
 }

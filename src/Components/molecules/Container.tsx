@@ -1,9 +1,9 @@
 // import React, { useState } from 'react'
-import gif1 from '../../assets/svgs/gif1.svg'
 import { Button } from '../atoms'
 import SearchBtn from '../atoms/Buttons/searchbtn'
 import icon from '../../assets/svgs/icon.svg'
-// import search from '../../assets/svgs/search.svg'
+import search from '../../assets/svgs/search.svg'
+import { ContainerProps } from '../atoms/Buttons/types'
 
 // const [search, newSearch] = useState('')
 
@@ -14,20 +14,28 @@ import icon from '../../assets/svgs/icon.svg'
 const clickFunc = () => {
   console.log('Button CLicked')
 }
-const Container = () => {
+const Container = ({ text, image }: ContainerProps) => {
   return (
-    <div className='h-[430px] w-[500px] bg-[#e6e6e6] flex flex-col items-center justify-center m-12 rounded-[50px]'>
-      <img className='w-[320px] h-[200px] px-8 pb-8 pt-[66px]' src={gif1} alt='' />
-      <h1 className='text-[#4E4E4E] pb-4 text-xl'>Looking For Job Change?</h1>
-      <p className='pb-4 text-center px-8'>
+    <div className='h-[830px] w-[800px] bg-[#efeded] flex flex-col items-center justify-center m-12 rounded-[50px]'>
+      <img className=' h-[200px] w-[429px] mx-[175px] mb-[80px]' src={image} alt='' />
+      <h1 className='text-[#697A8C] pb-4 text-[46px]'>{(text = text)}</h1>
+      <p className='pt-[30px] pb-4 text-center text-[24px] px-[93px]'>
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi, consectetur?
       </p>
-      {/* <SearchBtn type='submit' placeholder='Search Here' onChange={searchFunc} /> <br /> */}
+
+      <SearchBtn
+        className='mt-[46px] mb-[54px] h-[80px] w-[441px] text-[20px] pl-[20px] bg-[#E6EBF3] rounded-[15px]'
+        placeholder='Search Service Here...'
+        icon={search}
+      />
+
       <Button
         text='Explore More'
-        icon={icon}
-        className={'bg-[#6E877A] rounded-2xl h-[40px] w-[150px] flex justify-center items-center'}
+        className={
+          ' bg-[#345267] rounded-[56px] h-[75px] w-[287px] text-[27px] text-[#FFFFFF] flex justify-center items-center'
+        }
         clickFunction={clickFunc}
+        icon={icon}
       />
     </div>
   )

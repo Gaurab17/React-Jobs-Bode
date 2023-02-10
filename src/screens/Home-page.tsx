@@ -1,18 +1,21 @@
-import React from 'react'
-// import Container from '../Components/molecules/Container'
-import container from '../assets/svgs/container.svg'
-import Container from '../Components/molecules/Container'
+import containerImg from '../assets/svgs/container.svg'
 import Navbar from '../Components/molecules/Navbar'
+import { Container } from '../Components/atoms'
+import gif1 from '../assets/svgs/gif1.svg'
+import gif2 from '../assets/svgs/gif2.svg'
+import { useContext } from 'react'
 
 const HomePage = () => {
   return (
-    <div className='h-[565px] w-full relative '>
-      <img className=' w-full h-full object-cover absolute' src={container} alt='' />
+    <div className='h-full w-full relative '>
+      <img className='h-[900px] w-full object-cover absolute' src={containerImg} alt='' />
       <Navbar />
-      <h1 className='text-[40px] text-[#4E4E4E] text-center pt-8'>What Are You Looking For?</h1>
+      <h1 className='text-[56px] text-[#4E4E4E] text-center mt-[79px] pb-[76px]'>
+        What Are You Looking For?
+      </h1>
       <div className='flex flex-row items-center justify-center'>
-        <Container />
-        <Container />
+        <Container text='Looking For Job Change?' image={gif1} />
+        <Container text='Looking For Service Solution?' image={gif2} />
       </div>
     </div>
   )

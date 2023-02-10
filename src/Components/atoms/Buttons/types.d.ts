@@ -4,6 +4,7 @@ export type ButtonDataProps = {
   className?: string
   icon?: string
   clickFunction: () => void
+  buttonType?: string
 }
 
 export type SearchButtonProps = {
@@ -11,4 +12,10 @@ export type SearchButtonProps = {
   placeholder?: string
   className?: string
   icon?: string
+}
+
+export type ContainerProps = {
+  text?: string
+  image?: any
+  btnColor?: any
 }
