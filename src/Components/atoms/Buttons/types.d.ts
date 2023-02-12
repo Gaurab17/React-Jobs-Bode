@@ -13,11 +13,14 @@ export type SearchButtonProps = {
   placeholder?: string
   className?: string
   icon?: string
+  searchBtnType?: 'primary' | 'secondary'
 }
 
 export type ContainerProps = {
   text?: string
+  subText?: string
   image?: any
   btnColor?: 'primary' | 'secondary'
   className?: string
+  searchBtnType?: 'primary' | 'secondary'
 }
