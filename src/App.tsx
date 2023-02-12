@@ -8,6 +8,7 @@ import LandingPage from './screens/Logo-preview'
 function App() {
   // const [count, setCount] = useState(0)
   // const user = useContext(userContext)
+  
 
   return (
     <div className=' h-screen bg-gradient-to-r from-[#345267] to-[#3F8F8B]'>
