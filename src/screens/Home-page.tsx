@@ -6,15 +6,24 @@ import gif2 from '../assets/svgs/gif2.svg'
 
 const HomePage = () => {
   return (
-    <div className='h-full w-full relative '>
-      <img className='h-[900px] w-full object-cover absolute' src={containerImg} alt='' />
+    <div className="w-full bg-[url('/Frame.png')] bg-contain bg-repeat">
       <Navbar />
       <h1 className='text-[56px] text-[#4E4E4E] text-center mt-[79px] pb-[76px]'>
         What Are You Looking For?
       </h1>
       <div className='flex flex-row items-center justify-center'>
-        <Container text='Looking For Job Change?' image={gif1} btnColor='primary' />
-        <Container text='Looking For Service Solution?' image={gif2} btnColor='secondary' />
+        <Container
+          searchBtnType='primary'
+          text='Looking For Job Change?'
+          image={gif1}
+          btnColor='primary'
+        />
+        <Container
+          searchBtnType='secondary'
+          text='Looking For Service Solution?'
+          image={gif2}
+          btnColor='secondary'
+        />
       </div>
     </div>
   )

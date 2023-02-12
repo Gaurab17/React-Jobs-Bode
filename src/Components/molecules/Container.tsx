@@ -14,30 +14,20 @@ import { ContainerProps } from '../atoms/Buttons/types'
 const clickFunc = () => {
   console.log('Button CLicked')
 }
-const Container = ({ text, image, btnColor }: ContainerProps) => {
+const Container = ({ text, image, subText, btnColor, searchBtnType }: ContainerProps) => {
   return (
-    <div className='h-[830px] w-[800px] bg-[#efeded] flex flex-col items-center justify-center m-12 rounded-[50px]'>
+    <div className='h-[830px] w-[800px] bg-[#fff] flex flex-col items-center justify-center m-12 rounded-[50px] drop-shadow-3xl'>
       <img className=' h-[200px] w-[429px] mx-[175px] mb-[80px]' src={image} alt='' />
-      <h1 className='text-[#697A8C] pb-4 text-[46px]'>{(text = text)}</h1>
-      <p className='pt-[30px] pb-4 text-center text-[24px] px-[93px]'>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi, consectetur?
-      </p>
+      <h1 className='text-[#697A8C] pb-4 text-[46px]'>{text}</h1>
+      <p className='pt-[30px] pb-4 text-center text-[24px] px-[93px]'>{subText}</p>
 
       <SearchBtn
-        className='mt-[46px] mb-[54px] h-[80px] w-[441px] text-[20px] pl-[20px] bg-[#E6EBF3] rounded-[15px]'
+        className=''
         placeholder='Search Service Here...'
         icon={search}
+        searchBtnType={searchBtnType}
       />
-
-      <Button
-        text='Explore More'
-        btnType={btnColor}
-        className={
-          'rounded-[56px] h-[75px] w-[287px] text-[27px] text-[#FFFFFF] flex justify-center items-center'
-        }
-        clickFunction={clickFunc}
-        icon={icon}
-      />
+      <Button text='Explore More' btnType={btnColor} clickFunction={clickFunc} icon={icon} />
     </div>
   )
 }
