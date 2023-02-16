@@ -9,7 +9,7 @@ export type ButtonDataProps = {
 }
 
 export type SearchButtonProps = {
-  type?: 'button' | 'submit'
+  type?: 'button' | 'submit' | 'email' | 'password'
   placeholder?: string
   className?: string
   icon?: string
